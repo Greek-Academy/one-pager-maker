@@ -17,6 +17,10 @@ terraform init
 terraform apply
 ```
 
+terraform import google_identity_platform_config.default projects/one-pager-maker-production2
+
+```
+
 # Pricing plan
 
 - If you don't use the Blaze plan, google_identity_platform_config and google_firebase_storage_bucket will fail
@@ -36,3 +40,4 @@ terraform apply
 When I apply Terraform using Github Actions, I get an error message saying `roles/resourcemanager.projectCreator` permission.
 
 I don't know how to resolve this using a personal account, so I run it locally.
+```

@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 // import {useAuthEmulator, useFirestoreEmulator} from "../tests/integration/firebaseEmulatorUtils.ts";
 
 const firebaseConfig = {
@@ -14,6 +15,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
+export const storage = getStorage(app);
 export const db = getFirestore(app);
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
